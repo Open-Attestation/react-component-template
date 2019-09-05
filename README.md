@@ -1,44 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-component-template
 
-## Available Scripts
+React component boilerplate.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+-   [**React**](http://reactjs.org/) - A JavaScript library for building user interfaces.
+-   [**Webpack**](https://webpack.js.org/) - Component bundler.
+-   [**React testing library**](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices.
+-   [**Emotion**](https://emotion.sh/) - Library designed for writing css styles with JavaScript.
+-   [**Babel**](https://babeljs.io/) - Write next generation JavaScript today.
+-   [**Jest**](https://facebook.github.io/jest) - JavaScript testing framework used by Facebook.
+-   [**ESLint**](http://eslint.org/) - Make sure you are writing a quality code.
+-   [**Prettier**](https://prettier.io/) - Enforces a consistent style by parsing your code and re-printing it.
+-   [**Typescript**](https://www.typescriptlang.org/) - JavaScript superset, providing optional static typing
+-   [**Circle CI**](https://circleci.com/) - Automate tests and linting for every push or pull request.
+-   [**Storybook**](https://storybook.js.org/) - Tool for developing UI components in isolation with documentation.
+-   [**Semantic Release**](https://semantic-release.gitbook.io/semantic-release/) - Fully automated version management and package publishing.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Install
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The easiest way to use **nod** is through github by clicking on `Use this template` button in the repository page.
 
-### `npm test`
+You can also download or `git clone` this repo
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+$ git clone https://github.com/Open-Attestation/react-component-template.git my-module
+$ cd my-module
+$ rm -rf .git
+$ npm install
+```
 
-### `npm run build`
+Make sure to edit the following files according to your module's info:
+- package.json (module name and version)
+- webpack.config.js: replace `<please add the name of your library>` placeholder
+- README.md
+- LICENSE
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Commands
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```sh
+$ npm run storybook # open storybook and start editing your components
+$ npm run storybook:build # generate docs
+$ npm run test:watch # run tests with Jest
+$ npm run test:coverage # run tests with coverage
+$ npm run lint # lint code
+$ npm run build # build component
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setting up CI with automatic semantic-release versioning
 
-### `npm run eject`
+Generate CircleCI API token and run:
+```sh
+$ npx semantic-release-cli setup --ask-for-passwords`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You will need to provide credentials for github and npm.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Changing stuff
+### Removing Emotion
+- Uninstall npm packages
+```sh
+$ npm uninstall @emotion/core @emotion/styled @emotion/babel-preset-css-prop
+```
+- Remove `@emotion/babel-preset-css-prop` from Babel presets (configuration is made in package.json file)
+- Remove `@emotion/core` from Typescript configuration (in tsconfig.json file)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+GPL-3.0
