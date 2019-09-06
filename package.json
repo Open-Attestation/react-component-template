@@ -2,8 +2,14 @@
   "name": "@govtechsg/react-component-template",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17"
+  },
   "scripts": {
+    "build": "webpack --mode production && tsc --module es6 --declaration --emitDeclarationOnly --outDir build",
     "lint": "eslint . --ext .ts --ext .tsx --max-warnings 0",
     "lint:fix": "npm run lint -- --fix",
     "styleguide": "styleguidist server",
@@ -21,6 +27,7 @@
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "7.3.3",
+    "@emotion/babel-preset-css-prop": "10.0.17",
     "@testing-library/react": "9.1.4",
     "@types/jest": "24.0.18",
     "@types/react": "16.9.2",
@@ -55,7 +62,8 @@
         }
       ],
       "@babel/preset-typescript",
-      "@babel/preset-react"
+      "@babel/preset-react",
+      "@emotion/babel-preset-css-prop"
     ]
   },
   "browserslist": [

@@ -1,1 +1,1 @@
-export * from "./Counter.tsx";
+export * from "./components/Counter";
