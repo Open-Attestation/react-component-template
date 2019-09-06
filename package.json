@@ -47,6 +47,7 @@
     "react-docgen-typescript": "1.14.0",
     "react-dom": "16.9.0",
     "react-styleguidist": "9.1.16",
+    "semantic-release": "15.13.24",
     "typescript": "3.5.3",
     "webpack": "4.39.3",
     "webpack-cli": "3.3.7"
