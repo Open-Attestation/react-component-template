@@ -25,7 +25,9 @@ const StyledButton = styled.button`
   cursor: pointer;
   margin: 1px;
 `;
-
+/**
+ * Use `Counter` to embed a simple counter into your awesome application. It provides 2 buttons to increment / decrement counter value as well as an initial optional value.
+ */
 export const Counter: FunctionComponent<CounterProps> = ({ initialValue = 0 }) => {
   const [counter, setCounter] = useState(initialValue);
   return (
