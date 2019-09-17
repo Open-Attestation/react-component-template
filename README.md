@@ -64,6 +64,7 @@ $ npm uninstall @emotion/core @emotion/styled @emotion/babel-preset-css-prop
 ```
 - Remove `@emotion/babel-preset-css-prop` from Babel presets (configuration is made in package.json file)
 - Remove `@emotion/core` from Typescript configuration (in tsconfig.json file)
+- Remove `.storybook/webpack.config.js` (file created only for emotion css property support in storybook)
 
 ## License
 
