@@ -1,5 +1,8 @@
 import React, { useState, FunctionComponent } from "react";
 import styled from "@emotion/styled";
+import { getLogger } from "../logger";
+const { trace } = getLogger("Counter");
+
 interface CounterProps {
   /** Initial counter value */
   initialValue?: number;
@@ -33,8 +36,22 @@ export const Counter: FunctionComponent<CounterProps> = ({ initialValue = 0 }) =
   return (
     <div css={{ textAlign: "center" }}>
       <h1>Counter: {counter}</h1>
-      <StyledButton onClick={() => setCounter(counter => counter + 1)}>Increment</StyledButton>
-      <StyledButton onClick={() => setCounter(counter => counter - 1)}>Decrement</StyledButton>
+      <StyledButton
+        onClick={() => {
+          trace("Increment the counter by 1");
+          setCounter(counter => counter + 1);
+        }}
+      >
+        Increment
+      </StyledButton>
+      <StyledButton
+        onClick={() => {
+          trace("Decrement the counter by 1");
+          setCounter(counter => counter - 1);
+        }}
+      >
+        Decrement
+      </StyledButton>
     </div>
   );
 };
