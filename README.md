@@ -20,7 +20,7 @@ React component boilerplate.
 
 ## Install
 
-The easiest way to use **nod** is through github by clicking on `Use this template` button in the repository page.
+The easiest way to use **react-component-template** is through github by clicking on `Use this template` button in the repository page.
 
 You can also download or `git clone` this repo
 
