@@ -1,4 +1,5 @@
 import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
 import { Counter } from "./Counter";
 
 <Meta title="MDX|Counter" component={Counter} />
@@ -26,6 +27,6 @@ We can also add more detailed usage on our component. For instance this awesome 
 
 <Preview>
   <Story name="with initial value">
-    <Counter initialValue={10} />
+    <Counter initialValue={object("initialValue", 10)} />
   </Story>
 </Preview>
