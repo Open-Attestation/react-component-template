@@ -38,6 +38,7 @@ Make sure to edit the following files according to your module's info:
 - README.md
 - LICENSE
 - src/logger: replace `PLACEHOLDER_PROJECT_NAME`
+- .circleci/config.yml: uncomment the release step
 
 ## Commands
 

@@ -39,7 +39,7 @@ export const Counter: FunctionComponent<CounterProps> = ({ initialValue = 0 }) =
       <StyledButton
         onClick={() => {
           trace("Increment the counter by 1");
-          setCounter(counter => counter + 1);
+          setCounter((counter) => counter + 1);
         }}
       >
         Increment
@@ -47,7 +47,7 @@ export const Counter: FunctionComponent<CounterProps> = ({ initialValue = 0 }) =
       <StyledButton
         onClick={() => {
           trace("Decrement the counter by 1");
-          setCounter(counter => counter - 1);
+          setCounter((counter) => counter - 1);
         }}
       >
         Decrement
