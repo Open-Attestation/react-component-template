@@ -71,7 +71,7 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "babel": {
     "presets": [
       [
