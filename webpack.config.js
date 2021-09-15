@@ -5,13 +5,13 @@ module.exports = {
     path: __dirname + "/build",
     filename: "index.js",
     libraryTarget: "umd",
-    library: "<please add the name of your library>"
+    library: "<please add the name of your library>",
   },
   externals: {
-    react: "react"
+    react: "react",
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"]
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   module: {
     rules: [
@@ -19,9 +19,9 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
-  }
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
 };
