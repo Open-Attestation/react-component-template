@@ -10,9 +10,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "sourceMap": true,
-    "types": ["jest", "@emotion/core", "node"]
+    "types": ["jest", "@emotion/core", "node"],
+    "declaration": true,
+    "isolatedModules": true
   },
   "include": ["src"]
 }
