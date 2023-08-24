@@ -9,7 +9,7 @@
     "@babel/runtime-corejs3": "^7.15.4",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^10.0.27",
-    "debug": "^4.1.1"
+    "debug": "^4.3.4"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production npm run clean:build && npm run build:types && npm run build:es && npm run build:umd -- --mode production",
